@@ -5,11 +5,11 @@ using UnityEngine;
 public class EnterShop : MonoBehaviour
 {
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player object entered trigger zone on " + gameObject.name);
+            Debug.Log("Hit");
         }
     }
 
