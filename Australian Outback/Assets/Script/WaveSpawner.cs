@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public enum SpawnState {SPAWNING, WAITING, COUNTING };
+    public enum SpawnState { SPAWNING, WAITING, COUNTING };
 
     [System.Serializable]
     public class Wave
@@ -14,6 +14,8 @@ public class WaveSpawner : MonoBehaviour
         public int count;
         public float rate;
     }
+
+    GameObject[] gameObjects;
 
     public Wave[] waves;
 
@@ -27,8 +29,14 @@ public class WaveSpawner : MonoBehaviour
 
     private SpawnState state = SpawnState.COUNTING;
 
+    public Transform[] spawnPoints;
+
     private void Start()
     {
+        if (spawnPoints.Length == 0)
+        {
+            Debug.LogError("No spawn points");
+        }
         waveCountdown = timeBetweenWaves;
     }
 
@@ -38,8 +46,7 @@ public class WaveSpawner : MonoBehaviour
         {
             if (!EnemyIsAlive())
             {
-                Debug.Log("Wave done");
-                return;
+                waveCompleted();
             }
             else
             {
@@ -64,16 +71,37 @@ public class WaveSpawner : MonoBehaviour
     {
         searchCountdown -= Time.deltaTime;
 
-        if (searchCountdown <= 0)
+        if (searchCountdown <= 0f)
         {
             searchCountdown = 1f;
-            if (GameObject.FindGameObjectsWithTag("Enemy") == null)
+            gameObjects = GameObject.FindGameObjectsWithTag("Enemy");
+
+            if (gameObjects.Length == 0)
             {
                 return false;
             }
         }
-
         return true;
+    }
+
+    void waveCompleted()
+    {
+        Debug.Log("Wave Completed");
+
+        state = SpawnState.COUNTING;
+        waveCountdown = timeBetweenWaves;
+
+        if(nextWave + 1 > waves.Length - 1)
+        {
+            nextWave = 0;
+            Debug.Log("All waves complete");
+        }
+
+        else
+        {
+            nextWave++;
+
+        }
     }
 
     IEnumerator SpawnWave(Wave _wave)
@@ -95,6 +123,7 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy (Transform _enemy)
     {
         Debug.Log("Spawning Enemy: " + _enemy.name);
-        Instantiate(_enemy, transform.position, transform.rotation);
+        Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        Instantiate(_enemy, _sp.position, _sp.rotation);
     }
 }
