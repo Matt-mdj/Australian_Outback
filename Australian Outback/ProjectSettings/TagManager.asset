@@ -8,6 +8,7 @@ TagManager:
   - CinemachineTarget
   - Enemy
   - House
+  - Test
   layers:
   - Default
   - TransparentFX

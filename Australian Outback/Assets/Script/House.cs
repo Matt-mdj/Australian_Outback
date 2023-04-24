@@ -7,7 +7,7 @@ using TMPro;
 public class House : MonoBehaviour
 {
 
-    private int HP = 100;
+    public int HP = 100;
     public Slider healthBar;
     public static bool isGameOver;
 
@@ -33,12 +33,13 @@ public class House : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HouseHPtext.text = HP.ToString();
-        healthBar.value = HP;
+/*        HouseHPtext.text = HP.ToString();
+        healthBar.value = HP;*/
 
         if (isGameOver )
         {
             // Game Over Screen
+            print("House died");
         }
     }
 }

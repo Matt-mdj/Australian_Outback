@@ -13,7 +13,7 @@ public class EnemyNavMesh : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("House");
         target = player.transform;
     }
 
