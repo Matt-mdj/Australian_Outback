@@ -5,11 +5,12 @@ using UnityEngine;
 public class EnterShop : MonoBehaviour
 {
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Hit");
+            Debug.Log("Hit " + collision.gameObject.name);
+            UIHandler.instance.ShowPanel();
         }
     }
 
