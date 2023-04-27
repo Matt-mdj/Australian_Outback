@@ -1110,6 +1110,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1662307703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3920901903176769158, guid: 008097eeceb224fb7844e4053de667c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3391559979711442536}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1754082752
 Mesh:
   m_ObjectHideFlags: 0
@@ -2275,6 +2281,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6833623739055729918, guid: a40a0aa5bff1f4476890d4667067fda6,
+        type: 3}
+      propertyPath: Panel
+      value: 
+      objectReference: {fileID: 1662307703}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a40a0aa5bff1f4476890d4667067fda6, type: 3}
 --- !u!1001 &6583373176567890949
