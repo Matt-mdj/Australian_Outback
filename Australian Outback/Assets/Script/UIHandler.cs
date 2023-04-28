@@ -16,12 +16,29 @@ public class UIHandler : MonoBehaviour
         }
     }
 
-    
-
-    public void ShowPanel()
+    public void OnCollisionEnter(Collision collision)
     {
-        Panel.SetActive(true);
-        // LevelStatus.text = status;
-        // scoreText.text = scores;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Hit " + collision.gameObject.name);
+            Panel.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
+    // public void ShowPanel()
+    // {
+    //     if (Panel.activeInHierarchy == false){
+    //     Panel.SetActive(true);
+    //     }
+    //     // LevelStatus.text = status;
+    //     // scoreText.text = scores;
+    // }
+
+    public void ClosePanel(){
+        
+        Panel.SetActive(false);
+        Debug.Log("Close");
+        Cursor.lockState = CursorLockMode.Locked; 
     }
 }

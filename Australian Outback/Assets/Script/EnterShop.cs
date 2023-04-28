@@ -10,7 +10,7 @@ public class EnterShop : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Hit " + collision.gameObject.name);
-            UIHandler.instance.ShowPanel();
+            
         }
     }
 
