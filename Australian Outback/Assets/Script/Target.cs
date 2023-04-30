@@ -5,16 +5,23 @@ using UnityEngine.UI;
 
 public class Target : MonoBehaviour, IDamagable
 {
-    public float health = 100f;
+    public float health;
 
     public Slider healthBar;
 
+    Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     public void Damage(float damage)
     {
         health -= damage;
         if(health <= 0)
         {
-            Destroy(gameObject);
+            animator.SetTrigger("die");
+            Destroy(gameObject,1.5f);
         }
     }
 

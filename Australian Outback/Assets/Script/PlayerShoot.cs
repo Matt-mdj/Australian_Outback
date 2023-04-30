@@ -7,7 +7,8 @@ public class PlayerShoot : MonoBehaviour
 {
     public static Action shootInput;
     public static Action reloadInput;
-    public AudioSource shotSound; 
+    public AudioSource shotSound;
+    public AudioSource reloadSound;
 
     [SerializeField] private KeyCode reloadKey;
     Animator anim;
@@ -30,6 +31,7 @@ public class PlayerShoot : MonoBehaviour
         if(Input.GetKeyDown(reloadKey))
         {
             reloadInput?.Invoke();
+            reloadSound.Play();
         }
     }
 }
