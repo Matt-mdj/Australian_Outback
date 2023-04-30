@@ -8,6 +8,7 @@ public class HouseHealth : MonoBehaviour
 {
 
     public int HP = 100;
+    public int currentHP;
 
     public Slider healthBar;
 
@@ -25,5 +26,6 @@ public class HouseHealth : MonoBehaviour
     public void Update()
     {
         healthBar.value = HP;
+        currentHP= HP;
     }
 }

@@ -193,18 +193,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - name: Spiders
-    enemy: {fileID: 824799072229752138, guid: e1749d01ef79d4c448d0be96ccbadbd1, type: 3}
+    enemy: {fileID: 8414079919917280146, guid: e1749d01ef79d4c448d0be96ccbadbd1, type: 3}
     count: 1
     rate: 3
   - name: Spiders
-    enemy: {fileID: 824799072229752138, guid: e1749d01ef79d4c448d0be96ccbadbd1, type: 3}
+    enemy: {fileID: 8414079919917280146, guid: e1749d01ef79d4c448d0be96ccbadbd1, type: 3}
     count: 2
     rate: 3
   - name: Spiders
-    enemy: {fileID: 824799072229752138, guid: e1749d01ef79d4c448d0be96ccbadbd1, type: 3}
+    enemy: {fileID: 8414079919917280146, guid: e1749d01ef79d4c448d0be96ccbadbd1, type: 3}
     count: 3
     rate: 3
-  timeBetweenWaves: 5
+  timeBetweenWaves: 39
   waveCountdown: 0
   spawnPoints:
   - {fileID: 8578665882935188910}
