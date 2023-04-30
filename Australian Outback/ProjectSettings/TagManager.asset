@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - House
   - Test
+  - Here
+  - Stop
   layers:
   - Default
   - TransparentFX

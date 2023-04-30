@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Target : MonoBehaviour, IDamagable
 {
     public float health = 100f;
+
+    public Slider healthBar;
 
     public void Damage(float damage)
     {
@@ -13,5 +16,10 @@ public class Target : MonoBehaviour, IDamagable
         {
             Destroy(gameObject);
         }
+    }
+
+    void Update() 
+    {
+        healthBar.value = health;
     }
 }

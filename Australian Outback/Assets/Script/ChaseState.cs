@@ -8,34 +8,47 @@ public class ChaseState : StateMachineBehaviour
     List<Transform> wayPoints = new List<Transform>();
     NavMeshAgent agent;
 
+    Transform player;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        /*        agent = animator.GetComponent<NavMeshAgent>();
+
+                GameObject go = GameObject.FindGameObjectWithTag("House");
+               foreach (Transform t in go.transform)
+                {
+                    wayPoints.Add(t);
+                }
+                agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);*/
+
         agent = animator.GetComponent<NavMeshAgent>();
 
-        GameObject go = GameObject.FindGameObjectWithTag("House");
-       foreach (Transform t in go.transform)
-        {
-            wayPoints.Add(t);
-        }
-
-        agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);
+        player = GameObject.FindGameObjectWithTag("Stop").transform;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        /*        float distance = Vector3.Distance(wayPoints.position, animator.transform.position);*/
+
+        float distance = Vector3.Distance(player.position, animator.transform.position);
+
+        if(distance < 3f)
         {
-            animator.SetBool("isAtDestination", true);
+            animator.SetBool("isAttacking", true);
         }
+
+        agent.SetDestination(player.position);
+
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-/*    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        agent.SetDestination(animator.transform.position);
 
-    }*/
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
