@@ -23,7 +23,7 @@ public class UIHandler : MonoBehaviour
     void Start (){
         
         Debug.Log(moveSpeed);
-        
+        Gun.damage =  20;
     } 
 
     void Update(){
