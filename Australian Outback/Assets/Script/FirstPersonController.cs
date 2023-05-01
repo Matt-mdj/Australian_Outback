@@ -74,6 +74,14 @@ namespace StarterAssets
 
 		private const float _threshold = 0.01f;
 
+		public float getMoveSpeed(){
+			return MoveSpeed;
+		}
+
+		public float getJumpSpeed(){
+			return JumpHeight;
+		}
+
 		private bool IsCurrentDeviceMouse
 		{
 			get

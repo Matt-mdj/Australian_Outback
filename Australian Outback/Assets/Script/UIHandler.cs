@@ -1,20 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+using StarterAssets;
+
 
 public class UIHandler : MonoBehaviour
 {
     public GameObject Panel;
-    // public TextMeshProUGUI LevelStatus;
-    // public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI DamageText;
+    public TextMeshProUGUI SpeedText;
+    public TextMeshProUGUI JumpText;
     public static UIHandler instance;
+    public FirstPersonController FirstPerson;
+    public GunData Gun;
+    
+    private string moveSpeed;
+    private string jumpSpeed;
+    private string damageText;
+    
+    void Start (){
+        
+        Debug.Log(moveSpeed);
+        
+    } 
 
-     void Awake()
-    {
-        if (instance == null){
-            instance = this;
-        }
+    void Update(){
+        moveSpeed = FirstPerson.getMoveSpeed().ToString();
+        jumpSpeed = FirstPerson.getJumpSpeed().ToString();
+        damageText = Gun.getDamage().ToString();
+        SpeedText.text = moveSpeed;
+        JumpText.text = jumpSpeed;
+        DamageText.text = damageText;
     }
+    
+
+
+     
 
     public void OnCollisionEnter(Collision collision)
     {
@@ -23,6 +46,7 @@ public class UIHandler : MonoBehaviour
             Debug.Log("Hit " + collision.gameObject.name);
             Panel.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            
         }
     }
 
@@ -35,10 +59,30 @@ public class UIHandler : MonoBehaviour
     //     // scoreText.text = scores;
     // }
 
+    public void updateSpeed(){
+        FirstPerson.MoveSpeed = FirstPerson.MoveSpeed + 1;
+    }
+
+    public void updateJump(){
+        FirstPerson.JumpHeight = FirstPerson.JumpHeight + 1;
+    }
+
+    public void updateDamage(){
+        Gun.damage =  Gun.damage + 5;
+    }
+
+    public void minusDamge(){
+        Gun.damage =  Gun.damage - 5;
+    }
+
     public void ClosePanel(){
         
         Panel.SetActive(false);
         Debug.Log("Close");
         Cursor.lockState = CursorLockMode.Locked; 
+    }
+
+    public void NextLevel(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
