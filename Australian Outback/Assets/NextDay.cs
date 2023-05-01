@@ -13,5 +13,6 @@ public class NextDay : MonoBehaviour
 
     public void NextLevel(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

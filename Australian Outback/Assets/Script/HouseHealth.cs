@@ -12,12 +12,17 @@ public class HouseHealth : MonoBehaviour
 
     public Slider healthBar;
 
+    [SerializeField]
+    GameObject gameOverPanel;
+
     public void TakeDamage(int damageAmount)
     {
         HP -= damageAmount;
 
         if(HP <= 0)
         {
+            Cursor.lockState = CursorLockMode.None;
+            gameOverPanel.SetActive(true);
             //lose
             Debug.Log("You lose");
         }

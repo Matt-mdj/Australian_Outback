@@ -209,7 +209,7 @@ MonoBehaviour:
     enemy: {fileID: 5155939821671909853, guid: f6ef4ecc870996e40b3b14ee1d35a80c, type: 3}
     count: 2
     rate: 3
-  - name: Spiders
+  - name: Crocrodile
     enemy: {fileID: 1349223292316552159, guid: 8bb626baa77d4264e8e60ae96fb67069, type: 3}
     count: 1
     rate: 3
