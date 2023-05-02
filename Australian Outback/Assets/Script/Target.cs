@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Target : MonoBehaviour, IDamagable
 {
@@ -20,8 +21,11 @@ public class Target : MonoBehaviour, IDamagable
         health -= damage;
         if(health <= 0)
         {
+            PlayerMoney.instance.getMoney(500);
             animator.SetTrigger("die");
-            Destroy(gameObject,1.5f);
+            Destroy(gameObject,1f);
+
+            health = 0;
         }
     }
 

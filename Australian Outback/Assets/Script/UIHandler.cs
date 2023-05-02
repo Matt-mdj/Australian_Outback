@@ -60,15 +60,45 @@ public class UIHandler : MonoBehaviour
     // }
 
     public void updateSpeed(){
-        FirstPerson.MoveSpeed = FirstPerson.MoveSpeed + 1;
+
+        if (PlayerMoney.instance.money >= 500)
+        {
+            FirstPerson.MoveSpeed = FirstPerson.MoveSpeed + 1;
+
+            PlayerMoney.instance.spendMoney(500);
+        }
+        else
+        {
+            print("Broke Bitch");
+        }
     }
 
     public void updateJump(){
-        FirstPerson.JumpHeight = FirstPerson.JumpHeight + 1;
+
+        if (PlayerMoney.instance.money >= 500)
+        {
+            FirstPerson.JumpHeight = FirstPerson.JumpHeight + 1;
+
+            PlayerMoney.instance.spendMoney(500);
+        }
+        else
+        {
+            print("Broke Bitch");
+        }
     }
 
     public void updateDamage(){
-        Gun.damage =  Gun.damage + 5;
+
+        if (PlayerMoney.instance.money >= 500)
+        {
+            Gun.damage = Gun.damage + 5;
+
+            PlayerMoney.instance.spendMoney(500);
+        }
+        else
+        {
+            print("Broke Bitch");
+        }
     }
 
     public void minusDamge(){
