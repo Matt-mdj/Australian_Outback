@@ -8,7 +8,12 @@ public class Target : MonoBehaviour, IDamagable
 {
     public float health;
 
+    public float currentHP;
+
     public Slider healthBar;
+
+    [SerializeField]
+    TMP_Text HealthText;
 
     Animator animator;
 
@@ -32,5 +37,9 @@ public class Target : MonoBehaviour, IDamagable
     void Update() 
     {
         healthBar.value = health;
+
+        currentHP = health;
+
+        HealthText.text = currentHP.ToString();
     }
 }
