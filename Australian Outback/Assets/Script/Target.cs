@@ -20,6 +20,7 @@ public class Target : MonoBehaviour, IDamagable
         health -= damage;
         if(health <= 0)
         {
+            PlayerMoney.instance.getMoney(500);
             animator.SetTrigger("die");
             Destroy(gameObject,1.5f);
         }
