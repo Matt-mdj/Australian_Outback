@@ -15,7 +15,11 @@ MonoBehaviour:
   name: Pistol
   damage: 20
   maxDistance: 100000000
+<<<<<<< Updated upstream
   currentAmmo: 9626
+=======
+  currentAmmo: 1
+>>>>>>> Stashed changes
   magSize: 7
   fireRate: 400
   reloadTime: 1
