@@ -2064,11 +2064,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 720928410, guid: 008097eeceb224fb7844e4053de667c3, type: 3}
+      propertyPath: m_Name
+      value: Crosshair
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023334758, guid: 008097eeceb224fb7844e4053de667c3, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1036216020, guid: 008097eeceb224fb7844e4053de667c3, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702219933, guid: 008097eeceb224fb7844e4053de667c3, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 458338528849615383, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 458338528849615383, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 1924673514835620831, guid: 008097eeceb224fb7844e4053de667c3,
         type: 3}
       propertyPath: reloadSound
       value: 
       objectReference: {fileID: 154238769}
+    - target: {fileID: 2127791087758463672, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -6
+      objectReference: {fileID: 0}
     - target: {fileID: 2894725020456337740, guid: 008097eeceb224fb7844e4053de667c3,
         type: 3}
       propertyPath: m_RootOrder
@@ -2123,6 +2154,66 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920901903176769158, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210693212800319064, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121410637923913562, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121410637923913562, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5416263916556610205, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151148256515333644, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214988783781795112, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214988783781795112, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6867931394269778585, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6867931394269778585, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230328194119234581, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230328194119234581, guid: 008097eeceb224fb7844e4053de667c3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 9107928279751944859, guid: 008097eeceb224fb7844e4053de667c3,
         type: 3}
