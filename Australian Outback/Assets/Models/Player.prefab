@@ -1428,8 +1428,8 @@ MonoBehaviour:
   ammoDisplay: {fileID: 1315948205}
   moneyDisplay: {fileID: 615906359}
   speedDisplay: {fileID: 7826367169249202597}
-  jumpDisplay: {fileID: 0}
-  damageDisplay: {fileID: 0}
+  jumpDisplay: {fileID: 951829960137890353}
+  damageDisplay: {fileID: 3159599570376069081}
   gunData: {fileID: 11400000, guid: 142421617eda99a4bb6b3302eb700cbe, type: 2}
   firstPersonCon: {fileID: 1323265593636389164}
 --- !u!1 &6151148256515333644
