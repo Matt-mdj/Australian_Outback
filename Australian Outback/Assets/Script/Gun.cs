@@ -62,7 +62,7 @@ public class Gun : MonoBehaviour
     {
         timeSinceLastShot += Time.deltaTime;
 
-        Debug.DrawRay(muzzle.position,muzzle.forward, Color.yellow);
+        // Debug.DrawRay(muzzle.position,muzzle.forward, Color.yellow);
     }
 
     private void OnGunShot()

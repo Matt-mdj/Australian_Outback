@@ -16,6 +16,7 @@ public class PlayerShoot : MonoBehaviour
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
+        Cursor.lockState = CursorLockMode.Locked; 
     }
 
     private void Update()

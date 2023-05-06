@@ -7,7 +7,7 @@ public class Replay : MonoBehaviour
 {
     public void ReplayLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         print("Relay Level");
     }
 }
